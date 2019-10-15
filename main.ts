@@ -1,3 +1,9 @@
+/*
+R
+modified from liusen
+load dependency
+"rc": "file:../pxt-rc"
+*/
 
 //% color="#C814B8" weight=25 icon="\uf1d4"
 namespace RC_彩灯 {
