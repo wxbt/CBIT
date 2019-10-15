@@ -6,7 +6,7 @@
     "dependencies": {
         "core": "*",
         "neopixel": "github:microsoft/pxt-neopixel#v0.3.10",
-        "IR":  "github:wxbt/IR"
+        "红外遥控":  "github:wxbt/IR"
 	
 
     },
