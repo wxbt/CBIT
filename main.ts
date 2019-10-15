@@ -1,6 +1,6 @@
 
 //% color="#C814B8" weight=25 icon="\uf1d4"
-namespace RC-彩灯 {
+namespace RC_彩灯 {
     
     export enum enColor {
 
@@ -153,7 +153,7 @@ namespace RC-彩灯 {
  ****************************************************************************************************************************************/
 
 //% color="#87CEEB" weight=24 icon="\uf1b6"
-namespace RC-传感器 {
+namespace RC_传感器 {
 
     export enum enVoice {
         //% blockId="Voice" block="有声音"
@@ -251,7 +251,7 @@ namespace RC-传感器 {
  ****************************************************************************************************************************************/
 
 //% color="#808080" weight=23 icon="\uf11c"
-namespace RC-输入 {
+namespace RC_输入 {
 
     export enum enRocker {
         //% blockId="Nostate" block="无"
@@ -362,7 +362,7 @@ namespace RC-输入 {
  ****************************************************************************************************************************************/
 
 //% color="#D2691E" weight=22 icon="\uf001"
-namespace RC-蜂鸣器 {
+namespace RC_蜂鸣器 {
     export enum enBuzzer {
 
         //% blockId="NoBeep" block="响"
@@ -391,7 +391,7 @@ namespace RC-蜂鸣器 {
  ****************************************************************************************************************************************/
 
 //% color="#0000CD" weight=21 icon="\uf185"
-namespace RC-电机 {
+namespace RC_电机 {
 
     //% blockId=rc_Fan block="风扇|引脚 %pin|速度 %value"
     //% weight=100
@@ -420,7 +420,7 @@ namespace RC-电机 {
 }
 
 //% color="#006400" weight=20 icon="\uf1b9"
-namespace RC-小车 {
+namespace RC_小车 {
 
     const PCA9685_ADD = 0x41
     const MODE1 = 0x00
