@@ -1,6 +1,6 @@
 ﻿# cBit
 
-Mybitplanet
+Extensions of robot car for micro:bit
 
 ## License
 
