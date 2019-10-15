@@ -1,6 +1,6 @@
 
 //% color="#C814B8" weight=25 icon="\uf1d4"
-namespace RGB七彩灯 {
+namespace 彩灯 {
     
     export enum enColor {
 
@@ -247,11 +247,11 @@ namespace 传感器 {
 }
 
 /*****************************************************************************************************************************************
- *  输入 *****************************************************************************************************************************
+ *  控制 *****************************************************************************************************************************
  ****************************************************************************************************************************************/
 
 //% color="#808080" weight=23 icon="\uf11c"
-namespace 输入 {
+namespace 控制 {
 
     export enum enRocker {
         //% blockId="Nostate" block="无"
@@ -297,7 +297,7 @@ namespace 输入 {
         }
 
     }
-    //% blockId=cbit_Rocker block="遥杆|VRX %pin1|VRY %pin2|SW %pin3|返回 %value"
+    //% blockId=cbit_Rocker block="摇杆|VRX %pin1|VRY %pin2|SW %pin3|返回 %value"
     //% weight=100
     //% blockGap=10
     //% color="#808080"
@@ -1028,84 +1028,4 @@ namespace 小车 {
         switch (direct) {
             case enPos.LeftState: {
                 if (pins.analogReadPin(AnalogPin.P1) < 500) {
-                    if (value == enLineState.White) {
-                        temp = true;
-                    }
-                    setPwm(7, 0, 4095);
-                }
-                else {
-                    if (value == enLineState.Black) {
-                        temp = true;
-                    }
-                    setPwm(7, 0, 0);
-                }
-                break;
-            }
-
-            case enPos.RightState: {
-                if (pins.analogReadPin(AnalogPin.P2) < 500) {
-                    if (value == enLineState.White) {
-                        temp = true;
-                    }
-                    setPwm(6, 0, 4095);
-                }
-                else {
-                    if (value == enLineState.Black) {
-                        temp = true;
-                    }
-                    setPwm(6, 0, 0);
-                }
-                break;
-            }
-        }
-        return temp;
-
-    }
-    //% blockId=cbit_CarCtrl block="小车控制|%index"
-    //% weight=93
-    //% blockGap=10
-    //% color="#006400"
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=10
-    export function CarCtrl(index: CarState): void {
-        switch (index) {
-            case CarState.Car_Run: Car_run(255); break;
-            case CarState.Car_Back: Car_back(255); break;
-            case CarState.Car_Left: Car_left(255); break;
-            case CarState.Car_Right: Car_right(255); break;
-            case CarState.Car_Stop: Car_stop(); break;
-            case CarState.Car_SpinLeft: Car_spinleft(255); break;
-            case CarState.Car_SpinRight: Car_spinright(255); break;
-        }
-    }
-    //% blockId=cbit_CarCtrlSpeed block="小车控制|%index|速度 %speed"
-    //% weight=92
-    //% blockGap=10
-    //% speed.min=0 speed.max=255
-    //% color="#006400"
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=10
-    export function CarCtrlSpeed(index: CarState, speed: number): void {
-        switch (index) {
-            case CarState.Car_Run: Car_run(speed); break;
-            case CarState.Car_Back: Car_back(speed); break;
-            case CarState.Car_Left: Car_left(speed); break;
-            case CarState.Car_Right: Car_right(speed); break;
-            case CarState.Car_Stop: Car_stop(); break;
-            case CarState.Car_SpinLeft: Car_spinleft(speed); break;
-            case CarState.Car_SpinRight: Car_spinright(speed); break;
-        }
-    }
-    //% blockId=cbit_AloneCtrlSpeed block="单独电机|%index|速度 %speed"
-    //% weight=91
-    //% blockGap=10
-    //% speed.min=0 speed.max=255
-    //% color="#006400"
-    //% name.fieldEditor="gridpicker" name.fieldOptions.columns=10
-    export function AloneCtrlSpeed(index: AloneState, speed: number): void {
-        switch (index) {
-            case AloneState.Right_Z_Motor: Right_Z_run(speed); break;
-            case AloneState.Right_F_Motor: Right_F_run(speed); break;
-            case AloneState.Left_Z_Motor: Left_Z_run(speed); break;
-            case AloneState.Left_F_Motor: Left_F_run(speed); break;
-        }
-    }    
-}
+                    if (value == enLineState.
