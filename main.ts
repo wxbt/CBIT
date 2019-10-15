@@ -1,6 +1,6 @@
 
 //% color="#C814B8" weight=25 icon="\uf1d4"
-namespace 彩灯 {
+namespace RC-彩灯 {
     
     export enum enColor {
 
@@ -30,7 +30,7 @@ namespace 彩灯 {
         ON =1
     }
 
-    //% blockId=cbit_LED1 block="LED灯|引脚 %pin|状态 %value"
+    //% blockId=rc_LED1 block="LED灯|引脚 %pin|状态 %value"
     //% weight=5
     //% blockGap=8
     //% color="#C814B8"
@@ -41,7 +41,7 @@ namespace 彩灯 {
 
     }
 
-    //% blockId=cbit_LED2 block="LED灯|引脚 %pin|亮度 %value"
+    //% blockId=rc_LED2 block="LED灯|引脚 %pin|亮度 %value"
     //% weight=4
     //% blockGap=8
     //% color="#C814B8"
@@ -53,7 +53,7 @@ namespace 彩灯 {
 
     }
 
-    //% blockId=cbit_BreathLED block="呼吸灯|引脚 %pin"
+    //% blockId=rc_BreathLED block="呼吸灯|引脚 %pin"
     //% weight=3
     //% blockGap=8
     //% color="#C814B8"
@@ -74,7 +74,7 @@ namespace 彩灯 {
 
     }
 
-    //% blockId=cbit_RGB block="RGB七彩灯|引脚R %pin1|引脚G %pin2|引脚B %pin3|红色 %value1|绿色 %value2|蓝色 %value3"
+    //% blockId=rc_RGB block="RGB七彩灯|引脚R %pin1|引脚G %pin2|引脚B %pin3|红色 %value1|绿色 %value2|蓝色 %value3"
     //% weight=2
     //% blockGap=8
     //% color="#C814B8"
@@ -87,7 +87,7 @@ namespace 彩灯 {
         pins.analogWritePin(pin3, value3 * 1024 / 256);
 
     }
-    //% blockId=cbit_RGB2 block="RGB七彩灯|引脚R %pin1|引脚G %pin2|引脚B %pin3|显示 %value"
+    //% blockId=rc_RGB2 block="RGB七彩灯|引脚R %pin1|引脚G %pin2|引脚B %pin3|显示 %value"
     //% weight=1
     //% blockGap=8
     //% color="#C814B8"
@@ -153,7 +153,7 @@ namespace 彩灯 {
  ****************************************************************************************************************************************/
 
 //% color="#87CEEB" weight=24 icon="\uf1b6"
-namespace 传感器 {
+namespace RC-传感器 {
 
     export enum enVoice {
         //% blockId="Voice" block="有声音"
@@ -170,7 +170,7 @@ namespace 传感器 {
     }
     
 
-    //% blockId=cbit_Voice_Sensor block="声音传感器|引脚 %pin|返回 %value"
+    //% blockId=rc_Voice_Sensor block="声音传感器|引脚 %pin|返回 %value"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -195,7 +195,7 @@ namespace 传感器 {
             control.waitMicros(13);
         }
     }
-    //% blockId=cbit_IR_Sensor block="红外传感器|引脚 %pin|  |%value|障碍物"
+    //% blockId=rc_IR_Sensor block="红外传感器|引脚 %pin|  |%value|障碍物"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -213,7 +213,7 @@ namespace 传感器 {
 
     }
 
-    //% blockId=cbit_IR_Send block="红外发射|引脚 %pin"
+    //% blockId=rc_IR_Send block="红外发射|引脚 %pin"
     //% weight=100
     //% blockGap=10
     //% color="#87CEEB"
@@ -225,7 +225,7 @@ namespace 传感器 {
 
     }
    
-    //% blockId=cbit_ultrasonic block="超声波|发射管脚 %Trig|接收管脚 %Echo"
+    //% blockId=rc_ultrasonic block="超声波|发射管脚 %Trig|接收管脚 %Echo"
     //% color="#87CEEB"
     //% weight=100
     //% blockGap=10
@@ -247,11 +247,11 @@ namespace 传感器 {
 }
 
 /*****************************************************************************************************************************************
- *  控制 *****************************************************************************************************************************
+ *  输入 *****************************************************************************************************************************
  ****************************************************************************************************************************************/
 
 //% color="#808080" weight=23 icon="\uf11c"
-namespace 控制 {
+namespace RC-输入 {
 
     export enum enRocker {
         //% blockId="Nostate" block="无"
@@ -281,7 +281,7 @@ namespace 控制 {
         Realse = 1
     }
 
-    //% blockId=cbit_TouchPad block="触摸开关|引脚 %pin|返回 %value"
+    //% blockId=rc_TouchPad block="触摸开关|引脚 %pin|返回 %value"
     //% weight=100
     //% blockGap=10
     //% color="#808080"
@@ -297,7 +297,7 @@ namespace 控制 {
         }
 
     }
-    //% blockId=cbit_Rocker block="摇杆|VRX %pin1|VRY %pin2|SW %pin3|返回 %value"
+    //% blockId=rc_Rocker block="摇杆|VRX %pin1|VRY %pin2|SW %pin3|返回 %value"
     //% weight=100
     //% blockGap=10
     //% color="#808080"
@@ -339,7 +339,7 @@ namespace 控制 {
 
     }
 
-    //% blockId=cbit_Button block="按键|引脚 %pin|返回 %value"
+    //% blockId=rc_Button block="按键|引脚 %pin|返回 %value"
     //% weight=100
     //% blockGap=10
     //% color="#808080"
@@ -362,7 +362,7 @@ namespace 控制 {
  ****************************************************************************************************************************************/
 
 //% color="#D2691E" weight=22 icon="\uf001"
-namespace 蜂鸣器 {
+namespace RC-蜂鸣器 {
     export enum enBuzzer {
 
         //% blockId="NoBeep" block="响"
@@ -371,7 +371,7 @@ namespace 蜂鸣器 {
         Beep
     }
 
-    //% blockId=cbit_Buzzer block="有源蜂鸣器|引脚 %pin|值 %value"
+    //% blockId=rc_Buzzer block="有源蜂鸣器|引脚 %pin|值 %value"
     //% weight=100
     //% blockGap=10 
     //% color="#D2691E"
@@ -391,9 +391,9 @@ namespace 蜂鸣器 {
  ****************************************************************************************************************************************/
 
 //% color="#0000CD" weight=21 icon="\uf185"
-namespace 电机 {
+namespace RC-电机 {
 
-    //% blockId=cbit_Fan block="风扇|引脚 %pin|速度 %value"
+    //% blockId=rc_Fan block="风扇|引脚 %pin|速度 %value"
     //% weight=100
     //% blockGap=10
     //% color="#0000CD"
@@ -405,7 +405,7 @@ namespace 电机 {
 
     }
 
-    //% blockId=cbit_Servo block="舵机|引脚 %pin|角度 %value"
+    //% blockId=rc_Servo block="舵机|引脚 %pin|角度 %value"
     //% weight=100
     //% blockGap=10
     //% color="#0000CD"
@@ -420,7 +420,7 @@ namespace 电机 {
 }
 
 //% color="#006400" weight=20 icon="\uf1b9"
-namespace 小车 {
+namespace RC-小车 {
 
     const PCA9685_ADD = 0x41
     const MODE1 = 0x00
@@ -815,7 +815,7 @@ namespace 小车 {
      * *****************************************************************
      * @param index
      */
-    //% blockId=cbit_RGB_Car_Big2 block="小车RGB探照灯|选择车灯颜色 %value"
+    //% blockId=rc_RGB_Car_Big2 block="小车RGB探照灯|选择车灯颜色 %value"
     //% weight=101
     //% blockGap=10
     //% color="#C814B8"
@@ -873,7 +873,7 @@ namespace 小车 {
             }
         }
     }
-    //% blockId=cbit_RGB_Car_Big block="小车RGB探照灯|红色 %value1|绿色 %value2|蓝色 %value3"
+    //% blockId=rc_RGB_Car_Big block="小车RGB探照灯|红色 %value1|绿色 %value2|蓝色 %value3"
     //% weight=100
     //% blockGap=10
     //% color="#C814B8"
@@ -898,7 +898,7 @@ namespace 小车 {
 
     }
 
-    //% blockId=cbit_RGB_Car_Program block="七彩流水灯"
+    //% blockId=rc_RGB_Car_Program block="七彩流水灯"
     //% weight=99
     //% blockGap=10
     //% color="#C814B8"
@@ -912,7 +912,7 @@ namespace 小车 {
     }
 
 
-    //% blockId=cbit_ultrasonic_car block="超声波返回(cm)"
+    //% blockId=rc_ultrasonic_car block="超声波返回(cm)"
     //% color="#006400"
     //% weight=98
     //% blockGap=10
@@ -932,7 +932,7 @@ namespace 小车 {
         return d / 58;
     }
 
-    //% blockId=cbit_Music_Car block="小车音乐播放|%index"
+    //% blockId=rc_Music_Car block="小车音乐播放|%index"
     //% weight=97
     //% blockGap=10
     //% color="#006400"
@@ -961,7 +961,7 @@ namespace 小车 {
             case enMusic.power_down: music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once); break;
         }
     }
-    //% blockId=cbit_Servo_Car block="小车舵机|编号 %num|角度 %value"
+    //% blockId=rc_Servo_Car block="小车舵机|编号 %num|角度 %value"
     //% weight=96
     //% blockGap=10
     //% color="#006400"
@@ -976,7 +976,7 @@ namespace 小车 {
 
     }
 
-    //% blockId=cbit_Avoid_Sensor block="避障传感器|检测到 %value"
+    //% blockId=rc_Avoid_Sensor block="避障传感器|检测到 %value"
     //% weight=95
     //% blockGap=10
     //% color="#006400"
@@ -1016,7 +1016,7 @@ namespace 小车 {
         return temp;
 
     }
-    //% blockId=cbit_Line_Sensor block="巡线传感器|位置 %direct|检测到 %value"
+    //% blockId=rc_Line_Sensor block="巡线传感器|位置 %direct|检测到 %value"
     //% weight=94
     //% blockGap=10
     //% color="#006400"
